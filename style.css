@@ -1,5 +1,25 @@
-:root {color: blueviolet;}
+/*IMPORTANDO CONJUNTO DE FONTE*/
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
 
+/*CRIANDO VARIAVEIS PARA AS CORES*/
+:root {
+    --cor-de-fundo: #1E1E1E;
+    --verde: #6FFF57;
+    --branco: #FFFFFF;
+    --botao-ativo: #3A375E;
+    --botao-inativo: rgba(58, 55, 94, 0.5);
+    --texto-fundo: rgba(58, 55, 94, 0.3);
+}
+
+
+/*ESTILIZANDO A PAGINA, COR DE FUNDO E DA FONTE*/
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco);
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+/*ORGANIZANDO POSIÇOES DO CONTEUDO PRINCIPAL NO SITE*/
 .conteudo-principal {
     display: flex;
     flex-direction: column;
@@ -11,11 +31,17 @@
 }
 
 .titulo-principal {
-    text-align: left;
+    text-align: center;
     width: 100%;
     font-size: 32px;
 }
 
+/*MUDANDO COR DE PARTE DO TITULO PRINCIPAL*/
+.titulo-principal span {
+    color: var(--verde);
+}
+
+/*ESTILIZANDO BOTOES*/
 .botao {
     font-family: "Crakra Petch", sans-serif;
     background-color: var(--botao-inativo);
@@ -26,23 +52,15 @@
     font-size: 18px;
     align-items: center;
     width: 100%;
+
+    /*ESTILIZANDO CONTORNO DOS BOTOES*/
+    border-bottom: 4px solid var(--botao-ativo); 
+    border-left: 2px solid var(--botao-ativo); 
+    border-right: 2px solid var(--botao-ativo); 
+    border-top: none;
 }
 
-border-bottom: 4px solid var(--botao-ativo); 
-border-left: 2px solid var(--botao-ativo); 
-border-right: 2px solid var(--botao-ativo); 
-border-top: none;
-
-.botoes {
-    display: block;
-}
-
-@media screen and (min-width: 768px) {
-    .botoes {
-        display: flex;
-    }
-}
-
+/*ESTILIZANDO BORDAS DOS BOTOES E AJUSTE PARA CELULAR*/
 .botao:first-child {
     border-radius: 40px 40px 0 0;
 }
